@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import store from "./features/store";
 import { Provider } from "react-redux";
+import Layout from "./components/Layout/Layout";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root")
@@ -12,7 +13,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <Layout>
+        <App />
+      </Layout>
     </Provider>
   </React.StrictMode>
 );
