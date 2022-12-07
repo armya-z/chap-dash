@@ -5,6 +5,7 @@ import App from "./App";
 import store from "./features/store";
 import { Provider } from "react-redux";
 import Layout from "./components/Layout/Layout";
+import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root")
@@ -13,9 +14,11 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Layout>
-        <App />
-      </Layout>
+      <BrowserRouter>
+        <Layout>
+          <App />
+        </Layout>
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>
 );
